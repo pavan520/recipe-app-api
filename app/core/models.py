@@ -25,7 +25,8 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    """ This is a custom user model that supports email  instead of username """
+    """ This is a custom user model that supports emaili nstead
+         of username """
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
